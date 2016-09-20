@@ -3,6 +3,7 @@ import  {Template} from 'meteor/templating';
 import Items from '../api/items.js';
 
 import './body.html';
+import './item.js';
 
 Template.body.helpers({
   items() {
@@ -23,8 +24,8 @@ Template.body.events({
           value: 0
         }
       });
-      event.target.item1.value = 0
-      event.target.item2.value = 0
+      event.target.item1.value = ''
+      event.target.item2.value = ''
       console.log(event.target.item1.value);
   }
 });

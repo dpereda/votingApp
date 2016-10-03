@@ -5,6 +5,10 @@ import Items from '../api/items.js';
 import './body.html';
 import './item.js';
 
+Template.body.onCreated(function(){
+  Meteor.subscribe('allItems')
+});
+
 Template.body.helpers({
   items() {
       return Items.find({});

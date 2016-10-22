@@ -23,14 +23,17 @@ Meteor.methods({
   voteOnItem(which, id){
     check(which, String);
     check(id, String);
+    let date = new Date();
 
     if (which ==='itemOne') {
       Items.update(id, {
-        $inc: {'itemOne.value': 1}
+        $inc: {'itemOne.value': 1},
+        $set: { lastUpdated: date }
       });
     } else {
       Items.update(id, {
-        $inc: {'itemTwo.value': 1}
+        $inc: {'itemTwo.value': 1},
+        $set: { lastUpdated: date }
       });
     }
   }

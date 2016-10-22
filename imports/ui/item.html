@@ -1,8 +1,16 @@
 <template name='item'>
-  <div>
-    <span class='vote-one'>{{itemOne.text}}</span> {{itemOne.value}}
-    vs
-    <span class='vote-two'> {{itemTwo.text}}</span> {{itemTwo.value}}
+  <div class = 'item'>
+    <div class="vote-one">
+      <span>{{itemOne.value}}</span>
+      <p>{{itemOne.text}}</p>
+    </div>
+
+    <span>VS</span>
+
+    <div class="vote-two">
+      <span>{{itemTwo.value}}</span>
+      <p>{{itemTwo.text}}</p>
+    </div>
 
   </div>
 </template>
